@@ -1,6 +1,9 @@
 [
   {
     "listing": "/index.html",
-    "items": []
+    "items": [
+      "/posts/보충/2_데이터_타입.html",
+      "/posts/보충/1_입출력.html"
+    ]
   }
 ]

@@ -7,10 +7,24 @@
     "text": "No matching items"
   },
   {
+    "objectID": "posts/보충/2_데이터_타입.html",
+    "href": "posts/보충/2_데이터_타입.html",
+    "title": "Python",
+    "section": "",
+    "text": "# 튜플 값을 우회적으로 바꾸기\nt1 = (1, 2, ['사과', '포도'])\nt1[-1][0] = '귤'\nprint(t1)\n\n\n# 논리 연산자 (비트 연산자)\n\n# 1) and (&)\nprint(True and True)\nprint(True & True)\nprint(True and True)\nprint(True & True)\n\n# 2) or (|)\nprint(True or True)\nprint(True | True)\nprint(True or True)\nprint(True | True)\n\n# 3) xor (^) : 다르면 True, 같으면 False\n# print(True xor True)  # 지원 안해줌\nprint(True ^ True)\n# print(True xor True)  # 지원 안해줌\nprint(True ^ True)\n\n# 비트 연산자 비교\nprint(0b1011 and 0b0111)\nprint(bin(0b1011 and 0b0111))\nprint(0b1011 & 0b0111)\nprint(bin(0b1011 & 0b0111))\n\n\n# 내림, 반올림, 올림\n\nnum = 3.3\n\n# 1) 내림\nprint(int(num))\n\n# 2) 반올림\nprint(round(num))\nprint(round(num, 1))\n\n# 3) 올림\nprint(int(num + 0.99999999))\nprint(int(num) + (num != int(num)))\nprint(-(-num//1))\nimport math\nprint(math.ceil(num))"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "posts/보충/1_입출력.html",
+    "href": "posts/보충/1_입출력.html",
+    "title": "Python",
+    "section": "",
+    "text": "# 1. 표준 출력\n\nname = '홍길동'\nage = 20\n\nprint('내 소개:', name, age)\nprint(f'내 소개: {name} {age}')\n\nprint('내 소개:', name, age, sep='')\n\nprint('사과', end='')\nprint('포도')\n\n\n# 2. 문자열에 변수값을 넣는 3가지 방법\n\n# (1) % 포맷팅\n# # 일반적인 언어들의 방식\nname, age = '홍길동', 30\ntext = 'my name is %s, my age is %d' %('홍길동', 30)\ntext = 'my name is %s, my age is %d' %(name, age)\nprint(text)\n\n# (2) {} 포맷팅\ntext = 'my name is {}, my age is {}'.format(name, age)\nprint(text)\ntext = 'my name is {0}{0}, my age is {1}'.format(name, age)\nprint(text)\n\n# (3) f 포맷팅\n# python 3.6 버전부터 지원\ntext = f'my name is {name}, my age is {age}'\nprint(text)\n\n\n# 3. 자리수 지정 및 정렬\n\n# 최소 20글자, 20글자 넘어가면 그대로 출력\ntext = f'my name is {name:^20}, my age is {age:&gt;20}'\nprint(text)\ntext = f'my name is {name:-^20}, my age is {age:a&gt;20}'\nprint(text)\n\n\n# 4. 소수점 자리수 지정\n\nnum = 3.141592\nprint(f'{num:10.3f}')\n\n\n# 5. 문자열의 덧셈과 곱셈\n\n# 덧셈 : 문자열끼리 이어 붙이는 기능\nfruit1 = '사과'\nfruit2 = '포도'\nfruits = fruit1 + fruit2\nprint(fruits)\n\n# 곱셈 : 문자열 반복\nprint(fruit1*3)\n\n\n# 6. 표준 입력\n\n# input()\ntext = input(\"문자열을 입력하세요: \")\nprint(text)\ntext = input(\"정수를 입력하세요: \")\nprint(text)\nnum = int(input(\"정수를 입력하세요: \"))\nprint(num)\nnum = float(input(\"정수를 입력하세요: \"))\nprint(num)\n\n\n# 실습\n\n# 섭씨 -&gt; 화씨\n# 화씨 = 섭씨 * 1.8 + 32\n# 소숫점 2째 자리까지 표시\n\ncelsius = float(input(\"온도를 입력하세요: \"))\nfahrenheit = celsius * 1.8 + 32\nprint(f'섭씨온도 {celsius}은 화씨온도 {fahrenheit:.2f}입니다.')"
   }
 ]
